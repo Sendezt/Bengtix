@@ -10,15 +10,17 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nama',
+        'judul',
         'deskripsi',
-        'tanggal',
+        'tanggal_waktu',
         'lokasi',
         'gambar',
+        'user_id',
+        'kategori_id',
     ];
 
     protected $casts = [
-        'tanggal' => 'datetime',
+        'tanggal_waktu' => 'datetime',
     ];
 
     public function tikets()
@@ -39,5 +41,4 @@ class Event extends Model
     {
         return $this->hasMany(Order::class);
     }
-
 }
