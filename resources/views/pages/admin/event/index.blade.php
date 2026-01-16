@@ -39,10 +39,25 @@
                         <td>{{ $event->tanggal_waktu->format('d M Y') }}</td>
                         <td>{{ $event->lokasi }}</td>
                         <td>
-                            <a href="{{ route('admin.events.show', $event->id) }}" class="btn btn-sm btn-info mr-2">Detail</a>
-                            <a href="{{ route('admin.events.edit', $event->id) }}" class="btn btn-sm btn-primary mr-2">Edit</a>
-                            <button class="btn btn-sm bg-red-500 text-white" onclick="openDeleteModal(this)" data-id="{{ $event->id }}">Hapus</button>
-                        </td>
+                        <div class="flex items-center gap-2">
+                            <a href="{{ route('admin.events.show', $event->id) }}"
+                            class="btn btn-sm btn-info">
+                                Detail
+                            </a>
+
+                            <a href="{{ route('admin.events.edit', $event->id) }}"
+                            class="btn btn-sm btn-primary">
+                                Edit
+                            </a>
+
+                            <button
+                                class="btn btn-sm btn-error text-white"
+                                onclick="openDeleteModal(this)"
+                                data-id="{{ $event->id }}">
+                                Hapus
+                            </button>
+                        </div>
+                    </td>
                     </tr>
                     @empty
                     <tr>
