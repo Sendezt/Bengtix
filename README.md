@@ -90,12 +90,4 @@ php artisan storage:link
 
 # Jalankan server
 php artisan serve
-
-php artisan make:model Lokasi -m
-php artisan migrate
-php artisan make:seeder LokasiSeeder
-php artisan db:seed
-php artisan make:migration add_lokasi_id_to_events_table
-php artisan migrate
-php artisan make:controller LokasiController
-php artisan serve -->
+ -->
