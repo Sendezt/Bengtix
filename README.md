@@ -57,3 +57,45 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+<!-- ## 🚀 Project Setup (Quick Command)
+
+Jalankan perintah berikut secara berurutan setelah clone repository:
+
+```bash
+# Clone project
+git clone https://github.com/username/nama-project.git
+cd nama-project
+
+# Install backend dependency
+composer install
+
+# Setup environment
+cp .env.example .env
+# (Windows)
+# copy .env.example .env
+
+# Generate app key
+php artisan key:generate
+
+# Database migration (dan seeder jika ada)
+php artisan migrate --seed
+
+# Frontend dependency (jika ada)
+npm install
+npm run dev
+
+# Storage link (jka menggunakan upload file)
+php artisan storage:link
+
+# Jalankan server
+php artisan serve
+
+php artisan make:model Lokasi -m
+php artisan migrate
+php artisan make:seeder LokasiSeeder
+php artisan db:seed
+php artisan make:migration add_lokasi_id_to_events_table
+php artisan migrate
+php artisan make:controller LokasiController
+php artisan serve -->
