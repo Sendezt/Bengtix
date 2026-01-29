@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\TiketController;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\User\EventController as UserEventController;
 use App\Http\Controllers\User\OrderController;
+use App\Http\Controllers\Admin\LokasiController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -35,6 +36,9 @@ Route::middleware('auth')->group(function () {
 
         // Tiket Management
         Route::resource('tickets', TiketController::class);
+
+        // Lokasi
+        Route::resource('lokasis', LokasiController::class);
 
         // Histories
         Route::get('/histories', [HistoriesController::class, 'index'])->name('histories.index');

@@ -13,7 +13,7 @@ class Event extends Model
         'judul',
         'deskripsi',
         'tanggal_waktu',
-        'lokasi',
+        'lokasi_id',
         'gambar',
         'user_id',
         'kategori_id',
@@ -36,6 +36,10 @@ class Event extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function lokasi()
+    {
+        return $this->belongsTo(Lokasi::class);
     }
     public function orders()
     {
